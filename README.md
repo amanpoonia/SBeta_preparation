@@ -1,5 +1,7 @@
-# Derivatives
-Pricing models
+#prep
+
+**# Derivatives
+#Pricing models**
 
 Backtesting
 Strategy1: btst, equally weighted portfolio allocation everyday
