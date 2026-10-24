@@ -1,0 +1,51 @@
+# Performance analysis
+'''
+3 MAJOR THINGS TO LOOK FOR
+a) OutOfSample on its own
+b) With the benchmark
+c) With the IS and OOS performance
+
+
+WHAT TO LOOK FOR
+1) OOS performance metrics: Years, Equity curve, CAGR, Vol, SR, DD, MAX_DD, t-stat
+    for strategy, benchmark, fixed window
+
+2) Walk forward efficiency(WFE)
+    IS vs OOS: Sharpe oos vs mean(IS sharpe)
+    Correlation between IS Sharpe and OOS Sharpe
+
+3) Does optimizing beats not optimizing?
+    Sharpe: Optimizing vs fixed windows over the stitched period of test.
+
+4) Parameter stability
+    How stable is the chosen window over the time period.
+    Frequent switches from one window to other is bad.
+
+5) Consistency across folds
+    How many good period does the result depend on?
+    Remove top performing folds and does the sharpe collapse/ or it starts loosing to buy hold/benchmark.
+    Remove the best two folds mentally. If the strategy then loses to buy-and-hold everywhere else, it is a crash hedge, not a general edge. That can still be useful, but it is a different claim.
+
+6) Drawdowns
+    If walk-forward has a CAGR similar to buy-and-hold but a much smaller MaxDD, that is a real result.
+
+7) Realistic scenario
+   Transaction Cost Sensitivity
+    So far every trade has been free. To add costs, rebuild the positions
+    If the Sharpe collapses at 2–5 bp, the strategy trades too often for its edge. For S&P futures or ETFs, a few basis points per side is realistic.
+
+
+
+OVERALL INTERPRETATION
+
+How to interpret the overall picture
+
+We see	                                                                                    It means
+OOS Sharpe well below IS, WFE near 0, rank correlation near 0	                              The optimization fits noise. The window choice has no out-of-sample value.
+Walk-forward below the median fixed window	                                                Re-optimizing actively hurts. Use a fixed, pre-committed rule instead.
+Walk-forward ≈ fixed windows, all with modest Sharpe	                                      Trend-following has some edge, but the window doesn’t matter much.
+Lower CAGR than buy-and-hold, much smaller MaxDD	                                          It works as risk management or a crash hedge, not as alpha.
+Gains concentrated in 1–2 folds	                                                            Fragile result that depends on a couple of episodes.
+Edge disappears at 5 bp	                                                                    Not tradable as is.
+
+'''
