@@ -1,0 +1,18 @@
+VaR (Value at risk): 
+The potential losses(in value) a portfolio can incurr, 
+in a specific time period, with a given confidence.
+                                                                                  CVaR (Conditional value at risk) / ES (Expected shortfall):
+                                                                                  The average of losses beyond the VaR threshold for a given
+                                                                                  confidence level.
+                                                                                  Captures severity of losses in the tail of the distribution.
+                                                                                  Satisfy properties of a coherent risk measure.
+                                                                                  
+
+Limitation:
+VaR doesn't capture the severity of losses beyond the threshold.
+Not a coherent risk measure.
+
+
+                                    [A coherent risk measure is a mathematical framework in quantitative
+                                    finance and actuarial science used to evaluate portfolio risk in 
+                                    a consistent, logical manner.]
