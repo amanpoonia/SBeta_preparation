@@ -1,4 +1,5 @@
-'AIM: Prepare for Quantitative interviews'
+'AIM: Preparation for Quantitative interviews'
+
 **Risk**
 - Metrics
 - t-VaR, CvaR
