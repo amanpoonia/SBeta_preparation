@@ -1,17 +1,18 @@
-Risk
+'AIM: Prepare for Quantitative interviews'
+**Risk**
 - Metrics
 - t-VaR, CvaR
 - EVT VaR
 
-Backtesting
+**Backtesting**
 - Walkforward
 
-Pricing models
+**Pricing models**
 
-Factors
+**Factors**
 - Fama French
 
-Weighing schemas
+**Weighing schemas**
 - MSCI Factor tilt(factor score * Mcap)
 
 
